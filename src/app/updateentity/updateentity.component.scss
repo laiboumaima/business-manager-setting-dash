@@ -1,0 +1,22 @@
+@import '../styles/colors';
+.cancel{
+    border: 1px solid $gray;
+    border-radius: 5px;
+    color:darken($color: $gray, $amount: 30%);
+    &:hover{
+        background-color: darken($color: $gray, $amount: 30%);
+        color: $white;
+
+    }
+}
+.edit{
+    border: 1px solid $blue;
+    border-radius: 5px;
+    color: $blue;
+    &:hover{
+        background-color: $blue;
+        color: $white;
+
+    }
+
+}

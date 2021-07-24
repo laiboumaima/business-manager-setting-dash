@@ -20,15 +20,18 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Dashboard',
       icon: 'home',
+      url :"/"
       
     },
     {
       title: 'Entities',
       icon: 'book',
+      url :"Entities"
     },
     {
       title: 'Templates',
       icon:  'file',
+      url: 'Templates'
     },
     {
       title: 'Users management',
