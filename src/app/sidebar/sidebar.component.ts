@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
+import { NbSidebarService } from '@nebular/theme';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,12 +8,15 @@ import { NbMenuItem } from '@nebular/theme';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sidebarService: NbSidebarService) { }
 
   ngOnInit(): void {
   }
 
 
+  toggleCompact() {
+    this.sidebarService.toggle(true, 'right');
+  }
 
 
   items: NbMenuItem[] = [
@@ -36,6 +40,7 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Users management',
       icon: 'people',
+      url: 'usermanagement'
     },
   ];
 
@@ -44,11 +49,13 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Settings',
       icon: 'settings',
+      url:'Setting'
       
     },
     {
       title: 'Help',
       icon: 'question-mark-circle',
+      url:'help'
     },
     
   ];

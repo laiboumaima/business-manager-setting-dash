@@ -21,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSortModule} from '@angular/material/sort';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { CreateentityComponent } from './createentity/createentity.component';
 import { UpdateentityComponent } from './updateentity/updateentity.component';
@@ -31,6 +32,11 @@ import { EditorComponent } from './form/editor/editor.component';
 import { FormComponent } from './form/form/form.component';
 import { InputDetailsComponent } from './form/editor/input-details/input-details.component';
 import { RefComponent } from './form/form/ref/ref.component';
+import { SetupdashComponent } from './setupdash/setupdash.component';
+import { UsermanagementComponent } from './usermanagement/usermanagement.component';
+import { AdduserComponent } from './usermanagement/adduser/adduser.component';
+import { SettingComponent } from './setting/setting.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +52,11 @@ import { RefComponent } from './form/form/ref/ref.component';
     FormComponent,
     InputDetailsComponent,
     RefComponent,
+    SetupdashComponent,
+    UsermanagementComponent,
+    AdduserComponent,
+    SettingComponent,
+    HelpComponent,
     
   ],
   imports: [
@@ -64,7 +75,7 @@ import { RefComponent } from './form/form/ref/ref.component';
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbButtonModule,
-    NbDialogModule,
+    NbDialogModule.forRoot(),
     NbInputModule,
     NbCardModule,
     NbListModule,
@@ -73,7 +84,7 @@ import { RefComponent } from './form/form/ref/ref.component';
       NbCheckboxModule, 
       NbTagModule,
        NbRadioModule, 
-       NbDatepickerModule,
+       NbDatepickerModule.forRoot(),
        DragDropModule,
        HttpClientModule,
 
@@ -85,7 +96,8 @@ import { RefComponent } from './form/form/ref/ref.component';
     MatIconModule,
     MatSortModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
 
   ],
   providers: [],

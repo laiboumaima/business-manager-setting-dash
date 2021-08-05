@@ -1,0 +1,79 @@
+<ng-container>
+    <div class=" border  p-2">
+    <div class="d-flex justify-content-center">
+        <button  mat-button>Account</button>
+        <button  mat-button>Company</button>
+        
+    
+    </div>
+    <div >
+        <!--------------------account form-->
+        <form class="row p-1 m-2 justify-content-center "  >
+            
+            
+                <div class="col-md-6 col-lg-6 col-sm-12 d-flex flex-column mt-5">
+                    <mat-form-field>
+                        <input matInput placeholder="Full Name" value="{{user.fullname}}"  [formControl]="fullnameFormControl" >
+                      
+                         <mat-error *ngIf="fullnameFormControl.hasError('pattern')">
+                            fullname  Should be alphabit only 
+                         </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Birthday" type="date" value="">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="gender" type="" value="">
+                    </mat-form-field>
+                </div>
+              <div class="col-md-6 col-lg-6 col-sm-12 d-flex flex-column mt-3">
+
+
+                <p>Authontification Details</p>
+                <mat-form-field>
+                    <input matInput placeholder="email" type="email" value="" [formControl]="EmailFormControl" >
+                       <mat-error *ngIf="EmailFormControl.hasError('email')">
+                            please enter valide email
+                         </mat-error>
+                </mat-form-field>
+             <!-------password-->
+             <mat-form-field >
+                <input matInput   placeholder="New password" [type]="hide ? 'password' 
+                  : 'text'" [formControl]="passFormControl" >
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
+                  'visibility_off'}}</mat-icon>
+               
+              </mat-form-field>
+        
+              <mat-form-field >
+                 <input matInput  placeholder="Confirm password" [type]="hide ? 
+                      'password' : 'text'"  
+                            >
+                 <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
+                        'visibility_off'}}</mat-icon>
+              
+              </mat-form-field>
+              <mat-form-field >
+                <input matInput  placeholder="Current password" [type]="hide ? 
+                     'password' : 'text'" [formControl]="currentFormControl" 
+                           required>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
+                       'visibility_off'}}</mat-icon>
+                <mat-error *ngIf="currentFormControl.hasError('required')">
+                 please enter  your current password
+                 </mat-error>
+             </mat-form-field>
+                
+         
+              </div>
+              
+              <button class="btn" mat-button>Upadate</button>
+        </form>
+        <!--------------------account form-->
+        <!--------------------Company form-->
+        
+         <!--------------------Company form-->
+    </div>
+</div>
+</ng-container>
+

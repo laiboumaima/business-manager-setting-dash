@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
-
-
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';  
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';  
 import { filter } from 'rxjs/operators'; 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-setupdash',
+  templateUrl: './setupdash.component.html',
+  styleUrls: ['./setupdash.component.scss']
 })
-export class AppComponent {
+export class SetupdashComponent implements OnInit {
+
   title = 'business-manager-frontend';
 
   constructor (private router: Router,  
@@ -38,5 +37,5 @@ export class AppComponent {
     }  
   
   }  
-  
-} 
+
+}

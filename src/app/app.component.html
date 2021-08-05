@@ -21,9 +21,7 @@
               name="Oumaima laib"
               title="Engineer"
        
-           badgeText="10+"
-           badgeStatus="primary"
-           badgePosition="bottom left"
+          
               onlyPicture>
      </nb-user>
             </div>
@@ -34,9 +32,9 @@
       </div>
   </nb-layout-header>
   <nb-sidebar  responsive="true">
+    <router-outlet  name="sidebar"></router-outlet>
      
-      <app-sidebar></app-sidebar>
-      <button nbButton  size="tiny" (click)="toggleCompact()" class="mt-4" ></button>
+     
   </nb-sidebar>
   <nb-layout-column class="">
 

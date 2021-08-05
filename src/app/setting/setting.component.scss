@@ -1,0 +1,19 @@
+@import '../styles/colors';
+p{
+    font-weight: bold;
+    color: $blue;
+}
+.btn{
+    color: $blue;
+  border: 0.5px solid $blue;
+  &:hover{
+      background-color: $blue;
+      color: $white;
+     
+  }
+  
+}
+.border{
+    border-radius: 10%;
+    box-shadow: 3% $blue;
+}

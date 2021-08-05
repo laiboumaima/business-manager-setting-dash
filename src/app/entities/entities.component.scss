@@ -25,23 +25,24 @@ table {
 }
 .addbtn{
     width: 90%;
+   
     border: 1px solid $blue;
     border-radius: 20px;
     height:85%;
     margin-top: 10%;
-    display: flex;
+   display: flex;
    justify-content: center;
+   align-items: center;
   
     
     mat-icon{
+       
     
         color: $blue;
-        text-align: center;
+       
         
-        display: flex;
-        justify-self: center;
-        align-self: center;
-        transform: scale(5);
+      
+        transform: scale(4);
 
     }
     &:hover{

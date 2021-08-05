@@ -1,0 +1,14 @@
+@import '../../styles/colors';
+.tools{
+    color: black;
+    font-size: medium;
+}
+.toolbox{
+    background-color: $red;
+    color: $white;
+    border: 1px solid $red;
+    text-align: center;
+}
+.redborder{
+    border: 1px solid $red;
+}

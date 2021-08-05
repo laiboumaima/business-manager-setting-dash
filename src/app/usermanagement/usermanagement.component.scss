@@ -1,0 +1,21 @@
+@import '../styles/colors';
+.btn{
+    border: 1px solid $blue;
+    color: $blue;
+    background-color: $white;
+    
+    margin-top: 1%;
+
+    text-align: center;
+    &:hover{
+        background-color: $blue;
+        color: $white;
+    }
+
+
+
+}
+.border-red{
+    border: 1px solid $red;
+    border-radius: 20px;
+}

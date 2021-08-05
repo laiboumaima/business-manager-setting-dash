@@ -1,13 +1,18 @@
-<nb-layout cdkDropListGroup>
-   
-    <nb-sidebar>
+<div cdkDropListGroup class="row">
+   <div class="col-4">
+    <nb-card size="medium" class="redborder">
+        <nb-card-header class="toolbox">
+          ToolBox
+        </nb-card-header>
         <nb-list cdkDropListSortingDisabled cdkDropList (cdkDropListDropped)="drop($event)"
             [cdkDropListData]="predefined_inputs">
-            <nb-list-item *ngFor="let input of predefined_inputs" cdkDrag>
-                {{ input.name }}
+            <nb-list-item *ngFor="let input of predefined_inputs" cdkDrag class="tools">
+             <p> {{ input.name }}</p>  
             </nb-list-item>
         </nb-list>
-    </nb-sidebar>
+    </nb-card>
+   </div>
+ 
 
     <nb-layout-column>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -36,4 +41,4 @@
             <button nbButton status="primary">Save</button>
         </form>
     </nb-layout-column>
-</nb-layout>
+</div>
