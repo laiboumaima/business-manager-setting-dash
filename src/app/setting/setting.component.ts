@@ -11,6 +11,9 @@ import {ErrorStateMatcher} from '@angular/material/core';
 export class SettingComponent implements OnInit {
   
  user  = new User()
+ account : boolean  = true;
+ company : boolean  = true;
+ day:any
 
   constructor() {
     
@@ -19,16 +22,17 @@ export class SettingComponent implements OnInit {
   ngOnInit(): void {
     this.user.fullname = " Oumaima Laib"
     this.user.gender  = "fem"
-    this.user.birthday  =new Date(1999, 8, 22)
+    this.user.birthday  =new Date(1999, 8, 22).toISOString().split('T')[0];
     this.user.username  = "oumaima123"
     this.user.email  = "o.lb@gmail.com"
+   
      
   }
   EmailFormControl = new FormControl('', [
     Validators.email
 ]);
-  fullnameFormControl = new FormControl('', [
-    Validators.pattern("a-z")
+  fullnameFormControl = new FormControl('', [Validators.pattern('^[a-zA-Z \-\']+')
+ 
 ]);
   passFormControl = new FormControl('', [
 

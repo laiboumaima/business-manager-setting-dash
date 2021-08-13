@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adduser.component.scss']
 })
 export class AdduserComponent implements OnInit {
-
+  hide =true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onClickSubmit(data) {
+    alert("Entered  : " + data.name);
+ }
 }

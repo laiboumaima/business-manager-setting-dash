@@ -28,10 +28,19 @@
                
             </mat-cell>
         </ng-container>
+        <ng-container matColumnDef="role">
+            <mat-header-cell *matHeaderCellDef >Role</mat-header-cell> 
+            <mat-cell *matCellDef="let element" >
+                {{element.role}}
+               
+            </mat-cell>
+        </ng-container>
         <ng-container matColumnDef="action">
             <mat-header-cell *matHeaderCellDef ></mat-header-cell>
             <mat-cell *matCellDef="let row" >
-
+                <button mat-icon-button class="green btn mr-2" (click)="onedit(row)"><mat-icon>edit</mat-icon></button>
+                <button mat-icon-button  class="red btn" (click)="Delete(row.id)"><mat-icon>delete_forever</mat-icon></button>  
+             
                
             </mat-cell>
         </ng-container>

@@ -22,6 +22,9 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 import { CreateentityComponent } from './createentity/createentity.component';
 import { UpdateentityComponent } from './updateentity/updateentity.component';
@@ -37,6 +40,8 @@ import { UsermanagementComponent } from './usermanagement/usermanagement.compone
 import { AdduserComponent } from './usermanagement/adduser/adduser.component';
 import { SettingComponent } from './setting/setting.component';
 import { HelpComponent } from './help/help.component';
+/*** */
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,7 @@ import { HelpComponent } from './help/help.component';
     AdduserComponent,
     SettingComponent,
     HelpComponent,
+ 
     
   ],
   imports: [
@@ -97,8 +103,11 @@ import { HelpComponent } from './help/help.component';
     MatSortModule,
     MatButtonModule,
     MatInputModule,
-    MatSidenavModule
-
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatProgressBarModule,
+    ///
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

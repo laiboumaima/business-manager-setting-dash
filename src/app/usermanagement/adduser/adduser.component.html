@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center flex-column">
+    <h1 class=" text-center">Add new user </h1>
+    <form  #form = "ngForm" (ngSubmit) = "onClickSubmit(form.value)" >
+<div class="d-flex flex-column m-5 ">
+    <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
+        <mat-label> User full name</mat-label>
+        <input type="text" name="name"  matInput ngModel >
+     <!----  <mat-error *ngIf="fullnameFormControl.hasError('pattern')">
+            fullname  Should be alphabit only 
+         </mat-error>--> 
+    </mat-form-field>
+        <mat-form-field class="example-full-width"  >
+        <mat-label> User name</mat-label>
+        <input type="text" name="username"  matInput ngModel>
+    </mat-form-field>
+  
+        <mat-form-field class="example-full-width"  >
+        <mat-label> Birthday</mat-label>
+        <input type="date" name="bd"  matInput ngModel>
+    </mat-form-field>
+        <!---------------------gender-->
+        <!---------------email-->
+        <mat-form-field  class="example-full-width"  >
+            <mat-label> Email</mat-label>
+            <input type="email" name="email"  matInput ngModel>
+        </mat-form-field>
+
+      
+        <!-------------------------------------->
+        <mat-form-field  class="example-full-width"  >
+            <input matInput  placeholder="password" [type]="hide ? 'password' 
+              : 'text'"  >
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
+              'visibility_off'}}</mat-icon>
+           
+          </mat-form-field>
+     
+  
+</div>
+</form>
+</div>

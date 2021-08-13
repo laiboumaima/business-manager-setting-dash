@@ -3,14 +3,14 @@
         <h1>Create Entity</h1>
     </div>
     <div class="m-2">
-        <form class="example-form ">
+        <form class="example-form " #form = "ngForm" (ngSubmit) = "onClickSubmit(form.value)" >
             <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
                 <mat-label>Name</mat-label>
-                <input type="text" matInput placeholder="Ex. Clients">
+                <input type="text" name ="name" matInput placeholder="Ex. Clients"  ngModel>
 
             </mat-form-field>
             <div class="d-flex justify-content-end">
-                <button mat-icon-button  class="red btn px-4">create</button> 
+                <button  type="submit" class="red btn">create</button> 
             </div>
         </form>
     </div>

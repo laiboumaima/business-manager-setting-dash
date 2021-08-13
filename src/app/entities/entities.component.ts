@@ -74,7 +74,7 @@ export class EntitiesComponent implements OnInit {
     });
   }
 
-  clickMethod(name: string) {
+  Delete(name: any) {
     if(confirm("Are you sure to delete "+name)) {
       console.log("Implement delete functionality here");
     }

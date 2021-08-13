@@ -31,7 +31,11 @@ export class TemplatesComponent implements OnInit {
     return '#' + ('000000' + color).slice(-6);
   }
 
+  Delete(name: any) {
+    if(confirm("Are you sure to delete "+name)) {
+      console.log("Implement delete functionality here");
+    }
 
 
-
+}
 }

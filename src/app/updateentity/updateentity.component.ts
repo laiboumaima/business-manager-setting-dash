@@ -17,4 +17,7 @@ export class UpdateentityComponent  {
     onNoClick(): void {
       this.dialogRef.close();
     }
+    onClickSubmit(data) {
+      alert("Entered  : " + data.name);
+   }
 }

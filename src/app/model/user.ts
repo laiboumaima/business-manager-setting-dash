@@ -3,10 +3,10 @@ export class User {
     username:string
     fullname :string
     gender :string
-    birthday:Date
+    birthday:any
     email:string
    
     password:string
-
+  role:string
 
 }

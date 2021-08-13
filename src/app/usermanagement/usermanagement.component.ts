@@ -13,9 +13,9 @@ import { MatDialogRef } from '@angular/material/dialog';
 
 //***************************** */
 const Users: Array<User> = [
-  {id:1, fullname: 'user1',username:'user1',gender:'male',birthday:new Date(1999, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol"},
-  {id:2, fullname: 'user2',username:'user1',gender:'male',birthday:new Date(2000, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol"},
-  {id:3, fullname: 'user3',username:'user1',gender:'male',birthday:new Date(1996, 5, 2)  ,email:"effd@esi-sba.dz",password:"lol"},
+  {id:1, fullname: 'user1',username:'user1',gender:'male',birthday:new Date(1999, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol",role:"admin"},
+  {id:2, fullname: 'user2',username:'user1',gender:'male',birthday:new Date(2000, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol",role:"simpleuser"},
+  {id:3, fullname: 'user3',username:'user1',gender:'male',birthday:new Date(1996, 5, 2)  ,email:"effd@esi-sba.dz",password:"lol",role:"admin"},
 ];
 /************ */
 @Component({
@@ -26,7 +26,7 @@ const Users: Array<User> = [
 export class UsermanagementComponent implements OnInit {
   dataSource = new MatTableDataSource<User>(Users);
   constructor(private dialog : MatDialog) { }
-  displayedColumns: String[] =['username','fullname','email','action'];
+  displayedColumns: String[] =['username','fullname','email','role','action',];
   @ViewChild(MatSort) sort :MatSort;
   @ViewChild(MatPaginator) paginator :  MatPaginator;
   searchKey :string;
@@ -54,4 +54,26 @@ export class UsermanagementComponent implements OnInit {
     
   }
 
+
+
+
+  Delete(name: any) {
+    if(confirm("Are you sure to delete "+name)) {
+      console.log("Implement delete functionality here");
+    }
+  }
+
+
+  elemnt:any
+  onedit(element){
+    this.elemnt=element
+   
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus= true;
+  
+   // this.dialog.open(UpdateentityComponent,{data: {entity:this.elemnt}})
+    
+
+  }
 }

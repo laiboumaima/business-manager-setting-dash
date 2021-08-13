@@ -17,3 +17,40 @@ p{
     border-radius: 10%;
     box-shadow: 3% $blue;
 }
+
+
+
+/*********************************************/
+
+.profile-pic {
+    max-width: 222px;
+    max-height: 222px;
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 228px;
+    height: 228px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 72px;
+  transition: all .3s;
+}
+
+.circle:hover {
+  background-color: #909090;
+  cursor: pointer
+}
+img {
+    max-width: 100%;
+    height: auto;
+    min-width: 212px;
+  min-height: 212px
+}

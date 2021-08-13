@@ -11,5 +11,7 @@ export class CreateentityComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onClickSubmit(data) {
+    alert("Entered  : " + data.name);
+ }
 }

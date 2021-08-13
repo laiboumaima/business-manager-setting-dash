@@ -12,9 +12,11 @@
         </nb-list>
     </nb-card>
    </div>
+   
  
 
-    <nb-layout-column>
+    <nb-layout-column >
+    
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <input type="text" fullWidth nbInput placeholder="Template Name" formControlName="template_name">
             <div *ngIf="form.get('template_name')?.invalid && submited">

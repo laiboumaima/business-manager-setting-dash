@@ -15,6 +15,27 @@
 
 
 }
+.green{
+    color: $green;
+    background-color: aliceblue;
+    border: 0ch;
+    &:hover{
+        background-color: aliceblue;
+        border: 0ch;
+        color: lighten($color: $green, $amount: 40%)
+    }
+}
+.red{
+    background-color: aliceblue;
+    border: 0ch;
+    color:$red;
+   &:hover{
+        color: lighten($color: $red, $amount: 40%);
+        background-color: aliceblue;
+        border: 0ch;
+
+    }
+}
 .border-red{
     border: 1px solid $red;
     border-radius: 20px;
