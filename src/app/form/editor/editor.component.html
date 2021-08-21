@@ -7,7 +7,8 @@
         <nb-list cdkDropListSortingDisabled cdkDropList (cdkDropListDropped)="drop($event)"
             [cdkDropListData]="predefined_inputs">
             <nb-list-item *ngFor="let input of predefined_inputs" cdkDrag class="tools">
-             <p> {{ input.name }}</p>  
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="mb-3">{{ input.icon }}</mat-icon>
+             <p class="ml-1" > {{ input.name }}</p>  
             </nb-list-item>
         </nb-list>
     </nb-card>
@@ -15,32 +16,45 @@
    
  
 
-    <nb-layout-column >
-    
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <input type="text" fullWidth nbInput placeholder="Template Name" formControlName="template_name">
+
+    <div class="redborder round mb-4 col-7" style="height: fit-content;">
+        <form [formGroup]="form" class="m-4" (ngSubmit)="onSubmit()">
+            <input type="text" nbInput class="text-center mb-2 " fullWidth  placeholder="Template Name" formControlName="template_name">
             <div *ngIf="form.get('template_name')?.invalid && submited">
-                <p *ngIf="form.get('template_name')?.errors?.required">
+                <small *ngIf="form.get('template_name')?.errors?.required" class="text-danger">
                     Template Name is required.
-                </p>
+                </small>
             </div>
-            <nb-card>
-                <nb-card-header>
+            <nb-card class="border-0">
+                <nb-card-header class="text-center border-0 text-gray">
                     Inputs
                 </nb-card-header>
                 <nb-list cdkDropList cdkDropListDisabled [cdkDropListData]="inputs" (cdkDropListDropped)="drop($event)">
                     <nb-list-item *ngFor="let input of inputs; let i = index" cdkDrag>
-                        {{input.name}}
-                        <button nbButton type="button" (click)="open(input, i)">Edit</button>
-                        <button nbButton type="button" (click)="delete(input)">Delete</button>
+                        <div class="d-flex justify-content-between round redborder  col-12 align-content-center">
+                           <div class="row mt-3">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" class="mb-3">{{ input.icon }}</mat-icon>
+                            <b class="ml-1 " > {{ input.name }}</b>  
+                           </div>
+                            <div class="mt-2">
+                                <button  type="button" class="btn green" (click)="open(input, i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon></button>
+                                <button  type="button" class="btn red" (click)="delete(input)"> <mat-icon aria-hidden="false" aria-label="Example home icon" >delete</mat-icon></button>
+                            </div>
+                        </div>
+     
+
                     </nb-list-item>
-                    <nb-list-item *ngIf="inputs.length === 0">Add Inputs Here</nb-list-item>
+                    <nb-list-item *ngIf="inputs.length === 0" class="text-light">Add Inputs Here</nb-list-item>
                 </nb-list>
             </nb-card>
-            <p *ngIf="inputs_empty && submited">
+            <small *ngIf="inputs_empty && submited" class="text-danger">
                 There's no Component in list.
-            </p>
-            <button nbButton status="primary">Save</button>
+            </small>
+            <div class=" d-flex justify-content-center p-0    ">
+                <button class="btn  round redborder hover ">Save</button>
+            </div>
+           
         </form>
-    </nb-layout-column>
+    </div>
+  
 </div>

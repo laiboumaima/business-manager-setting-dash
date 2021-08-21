@@ -2,7 +2,7 @@
 
 
     <div class="mb-5">
-        <nb-menu [items]="items">
+        <nb-menu [items]="items" routerLinkActive="activebutton">
         </nb-menu>
     </div>
     <div class="mt-5 mb-5 border-top">
@@ -14,4 +14,5 @@
         </nb-menu>
     </div>
 </div>
-<button nbButton  size="tiny" (click)="toggleCompact()" class="mt-4" ></button>
+<nb-toggle class="mt-4 toggle"  status="basic" (click)="toggleCompact()"></nb-toggle>
+<!---<button nbButton  size="tiny" (click)="toggleCompact()" class="mt-4" ></button>--->

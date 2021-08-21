@@ -1,11 +1,10 @@
 @import '../../styles/colors';
 .button{
     border: 1px solid $blue;
-    border-radius: 20px;
+    border-radius: 5px;
     color: $blue;
     &:hover{
-        background-color: $blue;
         color: $white;
+        background-color: $blue;
     }
-
 }

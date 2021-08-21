@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Inject} from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { formatDate } from '@angular/common';
     interface gender {
       value: string;
      
@@ -10,11 +11,12 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
      
     }
 @Component({
-  selector: 'app-adduser',
-  templateUrl: './adduser.component.html',
-  styleUrls: ['./adduser.component.scss']
+  selector: 'app-edituser',
+  templateUrl: './edituser.component.html',
+  styleUrls: ['./edituser.component.scss']
 })
-export class AdduserComponent implements OnInit {
+export class EdituserComponent implements OnInit {
+
   hide =true;
   form: FormGroup;
   
@@ -25,15 +27,18 @@ export class AdduserComponent implements OnInit {
   ];
   
   Roles: role[] = [
-    {value: 'Admin'},
+    {value: 'admin'},
     {value: 'user'}
   
   ];
   
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,  public dialogRef: MatDialogRef<EdituserComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
-
+  
+      this.dialogRef.updateSize('70%');
+ 
 
     this.form = this.formBuilder.group(
       {
@@ -53,14 +58,19 @@ export class AdduserComponent implements OnInit {
           [
             Validators.required,
             Validators.minLength(8),
-            Validators.maxLength(40)
+            
           ]
         ],
-        birthday: ['', Validators.required],
-        role: ['', Validators.required],
+        birthday: [formatDate(this.data.user.birthday, 'yyyy-MM-dd', 'en'), Validators.required],
+       
+        gender: [this.data.user.gender],
+        role: [this.data.user.role, Validators.required],
       }
     );
   
+  }
+  onNoClick(): void {
+    this.dialogRef.close();
   }
   //
   submitted = false;
@@ -70,11 +80,8 @@ export class AdduserComponent implements OnInit {
   onClickSubmit() {
     this.submitted = true;
 
-    if (this.form.invalid) {
-      return;
-    }
-
-    console.log(JSON.stringify(this.form.value, null, 2));
+    console.log(this.form.value)
 
  }
+ 
 }

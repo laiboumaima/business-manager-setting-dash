@@ -42,7 +42,9 @@ import { SettingComponent } from './setting/setting.component';
 import { HelpComponent } from './help/help.component';
 /*** */
 import { FileUploadModule } from 'ng2-file-upload';
-
+import {MatSelectModule} from '@angular/material/select';
+import { EdituserComponent } from './usermanagement/edituser/edituser.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +64,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     AdduserComponent,
     SettingComponent,
     HelpComponent,
+    EdituserComponent,
+ 
  
     
   ],
@@ -70,33 +74,47 @@ import { FileUploadModule } from 'ng2-file-upload';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
+      //Nebular
+      NbThemeModule.forRoot({ name: 'default' }),
+      NbLayoutModule,
+      NbSidebarModule.forRoot(),
+      NbEvaIconsModule,
+      NbListModule,
+      NbCardModule,
+      NbDialogModule.forRoot(),
+      //Nebular - Components
+      NbInputModule,
+      NbButtonModule,
+      NbSelectModule,
+      NbRadioModule,
+      NbCheckboxModule,
+      NbToggleModule,
+      NbTagModule,
+      NbDatepickerModule.forRoot(),
+      NgbModule,
+      MatSlideToggleModule,
+  
     ReactiveFormsModule,
     NgbModule,
     NbUserModule,
     NbSearchModule,
     NbActionsModule,
-    NbSidebarModule.forRoot(),
+ 
     NbMenuModule.forRoot(),
-    NbButtonModule,
+
     NbDialogModule.forRoot(),
-    NbInputModule,
-    NbCardModule,
-    NbListModule,
-    NbSelectModule,
-     NbToggleModule,
-      NbCheckboxModule, 
-      NbTagModule,
-       NbRadioModule, 
-       NbDatepickerModule.forRoot(),
+  
+   
+  
+    
+    
        DragDropModule,
        HttpClientModule,
 
 
     //material
     MatTableModule,
+    MatSelectModule,
     MatPaginatorModule,
     MatDialogModule,
     MatIconModule,

@@ -24,23 +24,23 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Dashboard',
       icon: 'home',
-      url :"/"
+      link :"/"
       
     },
     {
       title: 'Entities',
       icon: 'book',
-      url :"Entities"
+      link :"Entities"
     },
     {
       title: 'Templates',
       icon:  'file',
-      url: 'Templates'
+      link: 'Templates'
     },
     {
       title: 'Users management',
       icon: 'people',
-      url: 'usermanagement'
+      link: 'usermanagement'
     },
   ];
 
@@ -49,13 +49,13 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Settings',
       icon: 'settings',
-      url:'Setting'
+      link:'Setting'
       
     },
     {
       title: 'Help',
       icon: 'question-mark-circle',
-      url:'help'
+      link:'help'
     },
     
   ];

@@ -1,3 +1,4 @@
+import { EdituserComponent } from './edituser/edituser.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { User } from '../model/user';
 
@@ -5,16 +6,14 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
-import {MatDialog,MatDialogConfig} from '@angular/material/dialog';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 
-
+import {MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 //***************************** */
 const Users: Array<User> = [
   {id:1, fullname: 'user1',username:'user1',gender:'male',birthday:new Date(1999, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol",role:"admin"},
-  {id:2, fullname: 'user2',username:'user1',gender:'male',birthday:new Date(2000, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol",role:"simpleuser"},
+  {id:2, fullname: 'user2',username:'user1',gender:'male',birthday:new Date(2000, 8, 22)  ,email:"effd@esi-sba.dz",password:"lol",role:"user"},
   {id:3, fullname: 'user3',username:'user1',gender:'male',birthday:new Date(1996, 5, 2)  ,email:"effd@esi-sba.dz",password:"lol",role:"admin"},
 ];
 /************ */
@@ -72,7 +71,7 @@ export class UsermanagementComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus= true;
   
-   // this.dialog.open(UpdateentityComponent,{data: {entity:this.elemnt}})
+   this.dialog.open(EdituserComponent,{data: {user:this.elemnt}})
     
 
   }

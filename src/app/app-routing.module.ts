@@ -17,8 +17,8 @@ const routes: Routes = [
 },
 {path:"usermanagement",component:UsermanagementComponent,data:{title:'User Management'}},
           {path:"Entities",component: EntitiesComponent,  data: {title: 'Entities'}},
-          {path:"create", component: EditorComponent, data: {title: 'Create Template'}},
-          {path:"form", component: FormComponent},
+          {path:"createtmplate", component: EditorComponent, data: {title: 'Create Template'}},
+
           {path:"Templates",component: TemplatesComponent,  data: {title: 'Templates'}},
             {path:"",component: SidebarComponent,outlet:"sidebar"},
             {path:"Setting",component: SettingComponent,  data: {title: 'Setting'}},
