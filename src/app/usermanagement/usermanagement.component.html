@@ -1,17 +1,17 @@
 
-<div class="row d-flex justify-content-between mx-4" >
-    <mat-form-field class="search-form-field">
+<div class="row d-flex justify-content-between mb-1 mx-4" >
+    <mat-form-field class="search-form-field mt-1">
         <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
 
     </mat-form-field>
-    <button  mat-fab  (click)="onCreate()" class="btn">
+    <button  mat-fab  (click)="onCreate()" class="btn mb-5">
         <mat-icon>add</mat-icon> 
     </button>
  
 </div>
 
-<div class="container-fluid mt-2">
-<div class="border-red" >
+<div class="container-fluid ">
+<div class="border-red px-2 py-1" >
     <mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="username">
             <mat-header-cell *matHeaderCellDef class="username" mat-sort-header>Username</mat-header-cell>

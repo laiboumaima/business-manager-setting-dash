@@ -20,8 +20,10 @@ $nb-themes: nb-register-theme((
   actions-divider-style:none,//
   user-picture-box-border-color: $red,//
   layout-background-color:white,//
-
-
+  toggle-basic-checked-background-color:$blue,//
+  toggle-basic-focus-checked-background-color:$blue,//
+  toggle-basic-checked-switcher-checkmark-color:$blue,//
+  toggle-basic-focus-checked-border-color:$blue,//
   // add your variables here like:
 
   // color-primary-100: #f2f6ff,

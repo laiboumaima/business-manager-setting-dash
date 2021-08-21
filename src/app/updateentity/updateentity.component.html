@@ -1,4 +1,4 @@
-
+<button mat-button (click)="onNoClick()" class="btn cancel"><mat-icon>close</mat-icon></button>
  <form #form = "ngForm" (ngSubmit) = "onClickSubmit(form.value)" >
 <div mat-dialog-content>
  
@@ -6,7 +6,7 @@
         <h1>Update Entity</h1>
     </div>
    
-    <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;">
+    <mat-form-field class="example-full-width"  style="width: 100%;">
     <mat-label> Entity Name</mat-label>
     <input type="text" name="name"  matInput [(ngModel)]="data.entity.name" required>
  
@@ -17,4 +17,3 @@
 <button mat-button class="btn edit mx-2 px-4" type="submit">Edit</button>
 </div>
 </form>
-<button mat-button (click)="onNoClick()" class="btn cancel">Cancel</button>

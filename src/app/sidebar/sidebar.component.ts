@@ -24,8 +24,9 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Dashboard',
       icon: 'home',
-      link :"/"
-      
+      link :"/",
+       skipLocationChange: true,
+        expanded:true,
     },
     {
       title: 'Entities',

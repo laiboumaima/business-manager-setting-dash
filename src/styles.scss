@@ -34,7 +34,7 @@ $business-frontend-theme: mat.define-light-theme((
 @include mat.all-component-themes($business-frontend-theme);
 
 @import 'themes';
-
+@import "@fontsource/mulish"; 
 @import '~@nebular/theme/styles/globals';
 
 @include nb-install() {
@@ -44,6 +44,8 @@ $business-frontend-theme: mat.define-light-theme((
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-
+*{
+  font-family: "Mulish";
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

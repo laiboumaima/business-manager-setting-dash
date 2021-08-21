@@ -1,15 +1,16 @@
 @import '../styles/colors';
 .cancel{
-    border: 1px solid $gray;
-    border-radius: 5px;
-    color:darken($color: $gray, $amount: 30%);
+    box-shadow:none;
+  
+   
     &:hover{
-        background-color: darken($color: $gray, $amount: 30%);
-        color: $white;
+     box-shadow:none;
+        color: $blue;
 
     }
 }
 .edit{
+    box-shadow:none;
     border: 1px solid $blue;
     border-radius: 5px;
     color: $blue;

@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~12.1.2",
     "@angular/platform-browser-dynamic": "~12.1.2",
     "@angular/router": "~12.1.2",
+    "@fontsource/mulish": "^4.5.0",
     "@nebular/eva-icons": "8.0.0",
     "@nebular/theme": "^8.0.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",

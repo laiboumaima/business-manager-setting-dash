@@ -16,26 +16,28 @@
 
 }
 .green{
+    background-color:$white;
     box-shadow: none;
     color: $green;
-    background-color: aliceblue;
+ 
     border: 0ch;
     &:hover{
         box-shadow: none;
-        background-color: aliceblue;
+        background-color:$white;
         border: 0ch;
         color: lighten($color: $green, $amount: 40%)
     }
 }
 .red{
+    background-color:$white;
     box-shadow: none;
-    background-color: aliceblue;
+  
     border: 0ch;
     color:$red;
    &:hover{
     box-shadow: none;
         color: lighten($color: $red, $amount: 40%);
-        background-color: aliceblue;
+        background-color:$white;
         border: 0ch;
 
     }

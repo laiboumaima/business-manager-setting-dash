@@ -19,8 +19,7 @@ p{
 }
 
 .button{
-    border: 0.5px solid $blue;
-    border-radius: 10px;
+   font-weight:bold;
     color: $blue;
    &:hover{
        color: $white;
@@ -39,11 +38,7 @@ p{
 
 
 
-.container {
-    max-width: 960px;
- 
-  
-}
+
 
 h1 {
     font-size: 20px;
@@ -76,11 +71,11 @@ h1 {
         label{
             position: absolute;
             top: 1px;
-            left: 70px;
+            left: 50px;
          
            border:  1px solid transparent;
            border-radius: 100%;
-           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+         
         }
         
     }
